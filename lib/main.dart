@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -10,18 +11,33 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-        primaryColor: Colors.yellow,
+
       ),
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          title: Text("i am rich") ,
+          backgroundColor: Colors.yellow,
+          title: Text("i am rich"),
+          foregroundColor: Colors.black,
+          
+
         ),
-        body: SafeArea(child: Center(
+        floatingActionButton: FloatingActionButton(
+          child: Icon(Icons.home,color: Colors.black,),
+          backgroundColor: Colors.yellow,
+          onPressed: (){
+            print("pressed");
+          },
+        ),
+        body: SafeArea(
+            child: Center(
           child: Image.asset("assets/diamonds.jpeg"),
-        )),
+
+        ),
+
+        ),
+
       ),
     );
-
   }
 }
