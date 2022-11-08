@@ -19,7 +19,17 @@ class MyApp extends StatelessWidget {
           backgroundColor: Colors.yellow,
           title: Text("i am rich"),
           foregroundColor: Colors.black,
-          
+          leading:  IconButton(icon: Icon(Icons.menu), onPressed:(){
+            print("pressed");
+          } ,),
+          actions: <Widget>[
+            IconButton(icon:Icon(Icons.notifications_none), onPressed:(){
+              print("notification clicked");},
+            ),
+            IconButton(icon:Icon(Icons.search), onPressed:(){
+              print("notification search");},
+            ),
+          ],
 
         ),
         floatingActionButton: FloatingActionButton(
