@@ -11,12 +11,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-
+    primarySwatch: Colors.yellow,
       ),
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.yellow,
           title: Text("i am rich"),
           foregroundColor: Colors.black,
           leading:  IconButton(icon: Icon(Icons.menu), onPressed:(){
@@ -34,7 +33,6 @@ class MyApp extends StatelessWidget {
         ),
         floatingActionButton: FloatingActionButton(
           child: Icon(Icons.home,color: Colors.black,),
-          backgroundColor: Colors.yellow,
           onPressed: (){
             print("pressed");
           },
@@ -42,7 +40,6 @@ class MyApp extends StatelessWidget {
         body: SafeArea(
             child: Center(
           child: Image.asset("assets/diamonds.jpeg"),
-
         ),
 
         ),
